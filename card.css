@@ -1,0 +1,160 @@
+:root{
+    --background:#1A1A1C;
+    --sec:#201f46;
+    --sec2:#615DC5;
+    --color3-hover:#00c9b7;
+    --color4-wh:#f0f0f0;
+}
+
+/* ============================ */
+/*   CONTAINER FOR CARDS        */
+/* ============================ */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* عشان لما يزيدوا عن 3 كروت ينزلوا سطر جديد */
+    justify-content: center;
+    gap: 20px; /* المسافة بين الكروت */
+    padding: 20px;
+   
+}
+
+/* ============================ */
+/*   CARD الطولي                */
+/* ============================ */
+.caart{
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    width: 300px; /* عرض الكارت */
+    padding: 20px;
+    
+    border-radius: 25px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+    gap: 15px;
+    color: var(--color4-wh);
+}
+
+.caart:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    
+}
+
+/* صورة المنتج فوق */
+.caart img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* العناوين */
+.caart h2, .caart h3{
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    color: #1A1A1C;
+}
+
+/* أزرار + و - + input */
+.caart-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.caart button{
+    width: 45px;
+    height: 45px;
+    background: #fc0707;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.caart button:hover{
+    background: #d96500;
+    transform: scale(1.08);
+}
+
+.caart input{
+    width: 70px;
+    height: 45px;
+    background: #f2f2f2;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+/* ============================ */
+/*   TOTAL                       */
+/* ============================ */
+.total{
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.totalTitle{
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.totalPrice{
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ff7b00;
+}
+
+.total button{
+    width: 100%;
+    background: #00c58e;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+.total button:hover{
+    transform: scale(1.05);
+    background: #00a677;
+}
+
+/* ============================ */
+/*   RESPONSIVE                 */
+/* ============================ */
+@media (max-width: 1024px){
+    .caart{
+        width: 45%; /* كارتين في السطر */
+    }
+}
+
+@media (max-width: 768px){
+    .caart{
+        width: 60%; /* كارت واحد ونص تقريبًا */
+    }
+}
+
+@media (max-width: 480px){
+    .caart{
+        width: 95%; /* كارت واحد في السطر */
+    }
+}

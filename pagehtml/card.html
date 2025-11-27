@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+   
+    <link rel="stylesheet" href="../pagecss/style.css">
+    <link rel="stylesheet" href="../pagecss/card.css">
+</head>
+<body onload="getdata()">
+    <div class="topnav">
+    <h3>Free shipping on all orders over $50</h3>
+    <select style="margin-left: 55%;" onchange="vall()" id="language-select">
+      <option>English</option>
+      <option>Arabic</option>
+      <img src="../pictchur/down-chevron.png" alt="Dropdown" width="10" height="10" />
+    </select>
+    <h3>USD</h3>
+    <h3>Need Help</h3>
+    <h3>Faqs</h3>
+  </div>
+   <nav class="navbar">
+    
+    <div class="log">
+      <h1 style="color: black;">Comforty</h1>
+    </div>
+    <div class="all">
+      <ul>
+      <li><a href="../pagehtml/index.html">Home</a></li>
+      <li><a href="../pagehtml/aboutPage.html">About</a></li>
+      <li><a href="../pagehtml/shopPage.html">Shop</a></li>
+    </ul>
+  </div>
+   
+  </nav>
+
+ 
+    
+    <div>
+        <h2 class="cart-title" style="text-align: center;">Your Cart</h2>
+    </div>
+
+    <!-- Container للكروت -->
+    <div class="cards-container">
+        <div class="caart">
+            <img src="../pictchur/product1.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <h3>$50</h3>
+            <div class="caart-controls">
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="caart">
+            <img src="../pictchur/product2.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <h3>$30</h3>
+            <div class="caart-controls">
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="caart">
+            <img src="../pictchur/product3.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <h3>$20</h3>
+            <div class="caart-controls">
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="caart">
+            <img src="../pictchur/product4.jpg" alt="Product 4">
+            <h2>Product 4</h2>
+            <h3>$40</h3>
+            <div class="caart-controls">
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="total">
+        <div class="totalTitle">Total= </div>
+        <div class="totalPrice">$0</div>
+        <input type="text"> 
+        <button id="copon">Confirm code</button>
+    </div>
+
+    <script src="../pagejs/card.js"></script>
+   
+    <script src="../pagejs/shop.js"></script>
+</body>
+</html>

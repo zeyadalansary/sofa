@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================== NAVBAR ===================== */
+nav {
+    display: flex;
+    justify-content: space-between; /* خلي العناصر موزعة */
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+nav h1 {
+    margin-top: -1px;
+    color: #f0f0f0;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: gray;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+nav .btn {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+}
+
+nav .btn button {
+    width: 100px;
+    background-color: var(--sec2);
+    color: var(--color4-wh);
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.topnav {
+    display: flex;
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 75px;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.topnav h3 {
+    color: white;
+    margin: 0;
+    font-weight: normal;
+}
+
+.topnav h3:hover {
+    color: gray;
+    transition: 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ===================== GENERAL LAYOUT ===================== */
+.all {
+    display: flex;
+    justify-content: space-around;
+}
+
+.all ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.all ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.all ul li a:hover {
+    color: gray;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.circle, .circle1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.cc {
+    border-radius: 10px;
+    background-color: rgba(250, 235, 215, 0.663);
+}
+
+.circle1 img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* ===================== PRODUCT SECTION ===================== */
+#payment-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.featured-products {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product img {
+    border-radius: 12px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product h3 {
+    font-size: 1.1rem;
+    color: #222;
+    margin-top: 15px;
+}
+
+.product h4 {
+    color: #007bff;
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+.product p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.product p:last-child {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* ===================== ABOUT ===================== */
+.about-us {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* ===================== SCROLLER ===================== */
+.strip-wrap {
+    width: 100%;
+    overflow: hidden; 
+    background: #f5f5f5;
+}
+
+#scroller {
+    display: flex;
+    gap: 12px;
+    animation: scroll 20s linear infinite;
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 600px) {
+    .item {
+        width: 160px;
+        height: 160px;
+    }
+}

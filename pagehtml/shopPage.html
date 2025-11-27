@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PC Store</title>
+  <link rel="stylesheet" href="../pagecss/product.css" />
+</head>
+
+<body>
+ <div class="topnav">
+    <h3>Free shipping on all orders over $50</h3>
+    <select style="margin-left: 55%;" onchange="vall()" id="language-select">
+      <option>English</option>
+      <option>Arabic</option>
+      <img src="../pictchur/down-chevron.png" alt="Dropdown" width="10" height="10" />
+    </select>
+    <h3>USD</h3>
+    <h3>Need Help</h3>
+    <h3>Faqs</h3>
+  </div>
+  <nav class="navbar">
+    
+    <div class="log">
+      <h1 style="color: black;">Comforty</h1>
+    </div>
+    <div class="all">
+      <ul>
+      <li><a href="../pagehtml/index.html">Home</a></li>
+      <li><a href="../pagehtml/AboutPage.html">About</a></li>
+      <li><a href="../pagehtml/ShopPage.html">Shop</a></li>
+    </ul>
+  </div>
+    <div class="cart-container">
+      <span class="cart-icon" onclick="location.assign('card.html')">🛒</span>
+      <span class="badge" id="cartCount">0</span>
+    </div>
+  </nav>
+
+  <section class="search-filter">
+    <input type="text" id="searchInput" placeholder="Search" onkeyup="search()" />
+      <select onchange="sortByPrice()" id="sort">
+        <option value="all.p">All Price</option>
+        <option value="low">Low → High</option>
+        <option value="high">High → Low</option>
+      </select>
+      <select onchange="filterByCategory()" id="specialtyFilter">
+        <option value="all">Category</option>
+        <option value="Fabric Sofas">Fabric Sofas</option>
+        <option value="Classic Sofas">Classic Sofas</option>
+        <option value="Modern Sofas">Modern Sofas</option>
+        <option value="Leather Sofas">Leather Sofas</option>
+        <option value="Sofa Sets">Sofa Sets</option>
+        <option value="Luxury Sofas">Luxury Sofas</option>
+      </select>
+  </section>
+
+  <div id="myProduct" class="product-container"></div>
+
+  <script src="../pagejs/shop.js"></script>
+</body>
+
+</html>
